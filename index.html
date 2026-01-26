@@ -1,106 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Heels Dance Classes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Heels Dance</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">High Heels Dance</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-    <h1>High Heels Dance Classes</h1>
-    <p>Feel confident. Dance bold. Shine in heels!</p>
-</header>
+  <!-- Banner Image -->
+  <section class="banner">
+    <img src="dance-banner.jpg" alt="Dance Studio Banner">
+  </section>
 
-<nav>
-    <button class="tab-link active" data-tab="intro">Intro</button>
-    <button class="tab-link" data-tab="about">About Me</button>
-    <button class="tab-link" data-tab="videos">Videos</button>
-    <button class="tab-link" data-tab="schedule">Schedule</button>
-    <button class="tab-link" data-tab="contact">Contact</button>
-</nav>
-
-<div id="intro" class="tab-content active">
-    <h2>High Heels Dance</h2>
-    <p>High Heels dance is a powerful and empowering style that combines fluid movements, confidence, and style while dancing in heels. It enhances posture, boosts confidence, and strengthens your legs, core, and balance. Perfect for self-expression, fun, and building stage presence!</p>
-</div>
-
-<div id="about" class="tab-content">
-    <h2>About Me</h2>
-    <p>Hi! I'm [Your Name], a professional High Heels dancer with over [X years] of teaching experience. I love helping students discover their confidence and flair through dance.</p>
-    <img src="your-photo1.jpg" alt="Photo of me dancing">
-    <img src="your-photo2.jpg" alt="Another photo of me dancing">
-</div>
-
-<div id="videos" class="tab-content">
-    <h2>Performance Videos</h2>
-    <video controls>
-        <source src="video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <video controls>
-        <source src="video2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <video controls>
-        <source src="video3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-<div id="schedule" class="tab-content">
-    <h2>Class Schedule</h2>
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Level</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Jan 30, 2026</td>
-            <td>Beginner</td>
-            <td>Learn the basics of High Heels dance in a fun environment.</td>
-        </tr>
-        <tr>
-            <td>Feb 6, 2026</td>
-            <td>Intermediate</td>
-            <td>Refine your style, learn advanced moves, and boost confidence.</td>
-        </tr>
-        <tr>
-            <td>Feb 13, 2026</td>
-            <td>Advanced</td>
-            <td>Master complex choreography and performance techniques.</td>
-        </tr>
-    </table>
-</div>
-
-<div id="contact" class="tab-content">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>Address: 123 Dance Studio Street, City, Country</p>
-</div>
-
-<footer>
-    &copy; 2026 High Heels Dance Classes
-</footer>
-
-<script>
-    const tabs = document.querySelectorAll('.tab-link');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs and contents
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            // Add active class to clicked tab and corresponding content
-            tab.classList.add('active');
-            document.getElementById(tab.dataset.tab).classList.add('active');
-        });
-    });
-</script>
-
+  <!-- Text Content -->
+  <main class="content">
+    <h1>High Heels Dance</h1>
+    <p>
+      High heels dance is a contemporary movement style that combines technique, musicality, and self-expression. 
+      The class focuses on posture, balance, and controlled movement while dancing in heels.
+    </p>
+    <p>
+      Through structured choreography, students develop body awareness, strength, and confidence. The practice emphasizes 
+      precision, fluidity, and intention rather than speed or acrobatics.
+    </p>
+    <p>
+      Classes are open to all levels and are designed to support individual progress in a respectful and focused environment.
+    </p>
+  </main>
 </body>
 </html>
