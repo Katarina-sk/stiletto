@@ -18,38 +18,39 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(50, 50, 50, 0.7); /* dark grey with transparency */
-  backdrop-filter: blur(4px);
+  background: #FDF9F4; /* same as content background */
   padding: 1rem 0;
   z-index: 1000;
   display: flex;
   justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* subtle shadow to separate from banner */
 }
 
 /* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem; /* spacing between tabs matches screenshot */
+  gap: 2.2rem; /* spacing between tabs */
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff; /* light text */
-  font-weight: 400; /* thin */
+  color: #222; /* black letters */
+  font-weight: 400;
   font-size: 0.95rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border-bottom: 2px solid transparent; /* for hover underline only */
+  border-bottom: 2px solid transparent; /* for hover underline */
   transition: border-bottom 0.25s ease;
 }
 
-/* Hover effect: only underline */
+/* Hover effect: underline only */
 .nav-links li a:hover,
 .nav-links li a.active {
-  border-bottom: 2px solid #fff; /* subtle underline like screenshot */
-  color: #fff; /* text stays white */
+  border-bottom: 2px solid #222; /* black underline */
+  color: #222; /* stays black */
 }
+
 
 
 /* Banner */
