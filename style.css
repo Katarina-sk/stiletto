@@ -14,12 +14,13 @@ body {
 
 /* Navbar */
 /* Navbar container */
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7); /* semi-transparent dark */
-  backdrop-filter: blur(5px);   /* modern glassy effect */
+  background: rgba(0,0,0,0.5); /* semi-transparent dark like screenshot */
+  backdrop-filter: blur(4px);
   padding: 1rem 0;
   z-index: 1000;
   display: flex;
@@ -30,26 +31,27 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.5rem; /* space between tabs */
+  gap: 2.2rem; /* adjust to match spacing in screenshot */
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff;
-  font-weight: 400;
+  color: #fff; /* pure white */
+  font-weight: 400; /* thin */
   font-size: 0.95rem;
-  letter-spacing: 2px;   /* thin spaced letters */
+  letter-spacing: 2px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent; /* for hover underline */
+  border-bottom: 2px solid transparent; /* for hover underline only */
+  transition: border-bottom 0.25s ease;
 }
 
-/* Hover effect */
+/* Hover effect: only underline, no color change */
 .nav-links li a:hover,
 .nav-links li a.active {
-  border-bottom: 2px solid #C9A66B; /* subtle gold underline on hover/active */
-  color: #C9A66B; /* optional, matches underline */
+  border-bottom: 2px solid #fff; /* white underline */
+  color: #fff; /* stays white, no olive/gold */
 }
+
 
 /* Banner */
 .banner {
