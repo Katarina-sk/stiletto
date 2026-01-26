@@ -14,12 +14,11 @@ body {
 
 /* Navbar */
 /* Navbar container */
-/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.5); /* semi-transparent dark like screenshot */
+  background: rgba(50, 50, 50, 0.7); /* dark grey with transparency */
   backdrop-filter: blur(4px);
   padding: 1rem 0;
   z-index: 1000;
@@ -31,12 +30,12 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem; /* adjust to match spacing in screenshot */
+  gap: 2.2rem; /* spacing between tabs matches screenshot */
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff; /* pure white */
+  color: #fff; /* light text */
   font-weight: 400; /* thin */
   font-size: 0.95rem;
   letter-spacing: 2px;
@@ -45,11 +44,11 @@ body {
   transition: border-bottom 0.25s ease;
 }
 
-/* Hover effect: only underline, no color change */
+/* Hover effect: only underline */
 .nav-links li a:hover,
 .nav-links li a.active {
-  border-bottom: 2px solid #fff; /* white underline */
-  color: #fff; /* stays white, no olive/gold */
+  border-bottom: 2px solid #fff; /* subtle underline like screenshot */
+  color: #fff; /* text stays white */
 }
 
 
