@@ -13,33 +13,42 @@ body {
 }
 
 /* Navbar */
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6); /* semi-transparent for modern look */
-  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.7); /* semi-transparent dark */
+  backdrop-filter: blur(5px);   /* modern glassy effect */
+  padding: 1rem 0;
   z-index: 1000;
-}
-
-.navbar ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  gap: 2rem;
 }
 
-.navbar ul li a {
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem; /* space between tabs */
+}
+
+.nav-links li a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: color 0.3s;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 2px;   /* thin spaced letters */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent; /* for hover underline */
 }
 
-.navbar ul li a:hover {
-  color: #C9A66B; /* subtle gold accent */
+/* Hover effect */
+.nav-links li a:hover,
+.nav-links li a.active {
+  border-bottom: 2px solid #C9A66B; /* subtle gold underline on hover/active */
+  color: #C9A66B; /* optional, matches underline */
 }
 
 /* Banner */
