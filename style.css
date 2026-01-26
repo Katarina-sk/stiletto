@@ -18,29 +18,29 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #FDF9F4; /* same as content background */
+  background-color: #FDF9F4 !important; /* solid, same as content */
   padding: 1rem 0;
   z-index: 1000;
   display: flex;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* subtle shadow to separate from banner */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 /* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem; /* spacing between tabs */
+  gap: 2.2rem;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #222; /* black letters */
+  color: #222 !important; /* black letters */
   font-weight: 400;
   font-size: 0.95rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border-bottom: 2px solid transparent; /* for hover underline */
+  border-bottom: 2px solid transparent;
   transition: border-bottom 0.25s ease;
 }
 
@@ -48,9 +48,8 @@ body {
 .nav-links li a:hover,
 .nav-links li a.active {
   border-bottom: 2px solid #222; /* black underline */
-  color: #222; /* stays black */
+  color: #222 !important;
 }
-
 
 
 /* Banner */
