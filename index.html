@@ -1,50 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Static Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Heels Dance Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f5f5;
+        }
 
-    main {
-      padding: 3rem 1rem;
-    }
+        header {
+            background-color: #e91e63;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    h1 {
-      color: #222;
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border-bottom: 2px solid #e91e63;
+        }
 
-    p {
-      color: #555;
-      max-width: 600px;
-      margin: 1rem auto;
-    }
+        nav button {
+            background: none;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
 
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+        nav button:hover {
+            background-color: #fce4ec;
+        }
+
+        nav button.active {
+            border-bottom: 3px solid #e91e63;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #e91e63;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e91e63;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>✅ It works!</h1>
-    <p>
-      This is a basic static website hosted on GitHub Pages.
-      If you can see this, your deployment is successful.
-    </p>
-  </main>
 
-  <footer>
-    <p>Deployed with GitHub Pages</p>
-  </footer>
+<header>
+    <h1>High Heels Dance Classes</h1>
+    <p>Feel confident. Dance bold. Shine in heels!</p>
+</header>
+
+<nav>
+    <button class="tab-link active" data-tab="intro">Intro</button>
+    <button class="tab-link" data-tab="about">About Me</button>
+    <button class="tab-link" data-tab="videos">Videos</button>
+    <button class="tab-link" data-tab="schedule">Schedule</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+</nav>
+
+<div id="intro" class="tab-content active">
+    <h2>High Heels Dance</h2>
+    <p>High Heels dance is a powerful and empowering style that combines fluid movements, confidence, and style while dancing in heels. It enhances posture, boosts confidence, and strengthens your legs, core, and balance. Perfect for self-expression, fun, and building stage presence!</p>
+</div>
+
+<div id="about" class="tab-content">
+    <h2>About Me</h2>
+    <p>Hi! I'm [Your Name], a professional High Heels dancer with over [X years] of teaching experience. I love helping students discover their confidence and flair through dance.</p>
+    <img src="your-photo1.jpg" alt="Photo of me dancing">
+    <img src="your-photo2.jpg" alt="Another photo of me dancing">
+</div>
+
+<div id="videos" class="tab-content">
+    <h2>Performance Videos</h2>
+    <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video controls>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video controls>
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div id="schedule" class="tab-content">
+    <h2>Class Schedule</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Level</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Jan 30, 2026</td>
+            <td>Beginner</td>
+            <td>Learn the basics of High Heels dance in a fun environment.</td>
+        </tr>
+        <tr>
+            <td>Feb 6, 2026</td>
+            <td>Intermediate</td>
+            <td>Refine your style, learn advanced moves, and boost confidence.</td>
+        </tr>
+        <tr>
+            <td>Feb 13, 2026</td>
+            <td>Advanced</td>
+            <td>Master complex choreography and performance techniques.</td>
+        </tr>
+    </table>
+</div>
+
+<div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>Address: 123 Dance Studio Street, City, Country</p>
+</div>
+
+<footer>
+    &copy; 2026 High Heels Dance Classes
+</footer>
+
+<script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
+        });
+    });
+</script>
+
 </body>
 </html>
