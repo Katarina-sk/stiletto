@@ -89,7 +89,7 @@ body {
   margin: 2rem auto;
   padding: 2rem 1rem;
   background-color: #f4efe8; /* base color */
-  background-image: url('french-stucco.png'); /* subtle paper texture */
+  background-image: url('../img/french-stucco.png'); /* subtle paper texture */
   background-size: cover; /* fills section */
   background-repeat: repeat; /* tiling if small texture */
   box-shadow: inset 0 0 15px rgba(0,0,0,0.03); /* subtle shading */
