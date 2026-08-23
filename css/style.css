@@ -102,6 +102,84 @@ body {
   border-radius: 8px; /* slightly rounded corners */
 }
 
+/* About page */
+.about-content {
+  max-width: 700px;
+  margin: 1.5rem auto 3rem;
+  padding: 2rem 1rem;
+}
+
+.about-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 2.25rem;
+}
+
+.about-photo {
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.about-section .about-photo {
+  width: 100%;
+  height: 315px;
+}
+
+.about-section .about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.about-section-reversed .about-photo {
+  order: 2;
+  transform: translateY(-60px);
+}
+
+.about-section-reversed .about-photo img {
+  border-radius: 36px;
+}
+
+.about-section p,
+.about-feature p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  color: #222;
+}
+
+.about-feature {
+  text-align: center;
+}
+
+.about-feature .about-photo {
+  width: min(100%, 460px);
+  margin: 0 auto 1.5rem;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.about-feature .about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-feature p {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
 .video-list {
     display: flex;
     flex-direction: column;
@@ -144,6 +222,31 @@ body {
 
   .content p {
     font-size: 1rem;
+  }
+
+  .about-content {
+    margin-top: 1rem;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-section-reversed .about-photo {
+    order: initial;
+    transform: none;
+  }
+
+  .about-section .about-photo {
+    width: min(100%, 210px);
+    height: 315px;
+    margin: 0 auto;
+  }
+
+  .about-feature .about-photo {
+    width: min(100%, 460px);
   }
 }
 
