@@ -1,0 +1,83 @@
+diff --git a/about.html b/about.html
+index 3ce43e3..01def1d 100644
+--- a/about.html
++++ b/about.html
+@@ -60,5 +60,8 @@
+       </p>
+     </section>
+   </main>
++  <footer class="site-footer">
++    <p>&copy; 2026 Stiletto</p>
++  </footer>
+ </body>
+ </html>
+diff --git a/contact.html b/contact.html
+index c3ba62a..fad1460 100644
+--- a/contact.html
++++ b/contact.html
+@@ -43,5 +43,8 @@
+       Make it easy for interested students to reach out and book classes or ask questions.
+     </p>
+   </main>
++  <footer class="site-footer">
++    <p>&copy; 2026 Stiletto</p>
++  </footer>
+ </body>
+ </html>
+diff --git a/css/style.css b/css/style.css
+index 2489fe2..76641f9 100644
+--- a/css/style.css
++++ b/css/style.css
+@@ -306,3 +306,12 @@ body {
+   }
+ }
+ 
++
++/* Footer */
++.site-footer {
++  background-color: #000;
++  color: #fff;
++  text-align: center;
++  padding: 1rem;
++  font-size: 0.85rem;
++}
+diff --git a/index.html b/index.html
+index 5e029c2..1557079 100644
+--- a/index.html
++++ b/index.html
+@@ -45,5 +45,8 @@
+       Classes are open to all levels and are designed to support individual progress in a respectful and focused environment.
+     </p>
+   </main>
++  <footer class="site-footer">
++    <p>&copy; 2026 Stiletto</p>
++  </footer>
+ </body>
+ </html>
+diff --git a/schedule.html b/schedule.html
+index 7ad8ae4..875a235 100644
+--- a/schedule.html
++++ b/schedule.html
+@@ -43,5 +43,8 @@
+       Make it easy for students to find a class time that works for them.
+     </p>
+   </main>
++  <footer class="site-footer">
++    <p>&copy; 2026 Stiletto</p>
++  </footer>
+ </body>
+ </html>
+diff --git a/videos.html b/videos.html
+index 40897d1..9b9a6ba 100644
+--- a/videos.html
++++ b/videos.html
+@@ -79,6 +79,9 @@
+     </div>
+ 
+   </main>
++  <footer class="site-footer">
++    <p>&copy; 2026 Stiletto</p>
++  </footer>
+ </body>
+ </html>
+ 
