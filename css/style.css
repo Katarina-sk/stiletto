@@ -359,6 +359,19 @@ body {
     text-align: left;
 }
 
+.contact-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: #222;
+  flex-shrink: 0;
+}
+
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   /* Navbar adjustments for tablet */
