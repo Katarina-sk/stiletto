@@ -102,6 +102,49 @@ body {
   border-radius: 8px; /* slightly rounded corners */
 }
 
+/* Schedule page */
+.schedule-intro {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.schedule-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+  color: #333;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.schedule-table th {
+  padding: 0 1.1rem 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.schedule-table td {
+  padding: 1rem 1.1rem;
+  border-top: 1px solid rgba(34, 34, 34, 0.15);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.schedule-table td:first-child {
+  border-left: 1px solid rgba(34, 34, 34, 0.15);
+  border-radius: 8px 0 0 8px;
+}
+
+.schedule-table td:last-child {
+  border-right: 1px solid rgba(34, 34, 34, 0.15);
+  border-radius: 0 8px 8px 0;
+}
+
 /* About page */
 .about-content {
   max-width: 700px;
@@ -301,6 +344,21 @@ body {
     display: block;
 }
 
+.schedule-notes p::before {
+    content: "✦";
+    margin-right: 12px;
+}
+
+.schedule-notes {
+    width: fit-content;
+    margin: 40px auto 0;
+}
+
+.schedule-notes p {
+    margin: 0 0 15px;
+    text-align: left;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   /* Navbar adjustments for tablet */
@@ -354,6 +412,10 @@ body {
   }
 
   .content p {
+    font-size: 1rem;
+  }
+
+  .schedule-table {
     font-size: 1rem;
   }
 
@@ -431,6 +493,12 @@ body {
   .content p {
     font-size: 0.9rem;
     margin-bottom: 0.75rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
   }
 
   .about-section p,
