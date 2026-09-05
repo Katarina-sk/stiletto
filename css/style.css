@@ -32,6 +32,53 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
+/* Navbar brand (mobile only) */
+.nav-brand {
+  display: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222 !important;
+  text-decoration: none;
+}
+
+/* Hamburger toggle button (mobile only) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #222;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Navbar links */
 .nav-links {
   list-style: none;
@@ -375,8 +422,52 @@ body {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   /* Navbar adjustments for tablet */
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .nav-brand {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
   .nav-links {
-    gap: 0.8rem;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    background-color: #f4efe8;
+    background-image: url('../img/french-stucco.png');
+    background-repeat: repeat;
+    background-size: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.9rem 1rem;
+  }
+
+  body.nav-open {
+    overflow: hidden;
   }
 
   .nav-links li a {
@@ -460,25 +551,26 @@ body {
   .about-feature .about-photo {
     width: min(100%, 460px);
   }
+
+  .video-list {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
   /* Navbar adjustments for mobile phones */
   .navbar {
-    padding: 0.5rem 0.25rem;
-    overflow-x: auto;
+    padding: 0.5rem 1rem;
   }
 
-  .nav-links {
-    gap: 0.3rem;
-    padding: 0 0.25rem;
+  .nav-brand {
+    font-size: 0.8rem;
   }
 
   .nav-links li a {
     font-size: 0.8rem;
-    letter-spacing: 0px;
-    padding: 0.3rem 0.2rem;
-    white-space: nowrap;
+    letter-spacing: 0.5px;
+    padding: 0.8rem 1rem;
   }
 
   .banner {
