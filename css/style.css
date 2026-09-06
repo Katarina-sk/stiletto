@@ -110,11 +110,47 @@ body {
 
 /* Banner */
 .banner {
+  position: relative;
   width: 100%;
   margin-top: 60px; /* navbar offset */
   background-color: #eeeeec;
   background-image: url('../img/french-stucco.png');
   background-repeat: repeat;
+  overflow: hidden;
+}
+
+/* On screens wider than the capped 1200px photo, extend the dark-wood floor on both sides using
+   crops that contain no part of the dancer, so the floor appears to continue but she is never
+   duplicated. The crops are heavily darkened and blurred so the extension reads as ambient floor
+   receding into shadow, hiding both the mirror seam and the transition into the sharper photo. */
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  z-index: 0;
+}
+
+.banner::before {
+  left: 0;
+  background-image: url('../img/banner/banner-floor-edge-mirrored.jpg');
+  background-position: right center;
+}
+
+.banner::after {
+  right: 0;
+  background-image: url('../img/banner/banner-floor-edge.jpg');
+  background-position: left center;
+}
+
+.banner picture,
+.banner img {
+  position: relative;
+  z-index: 1;
 }
 
 .banner img {
@@ -123,6 +159,15 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* Below 1200px the photo already fills the full banner width, so the floor extension is never
+   visible; skip loading those extra images. */
+@media (max-width: 1200px) {
+  .banner::before,
+  .banner::after {
+    background-image: none;
+  }
 }
 
 /* Content section */
