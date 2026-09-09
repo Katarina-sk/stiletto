@@ -109,7 +109,7 @@ body {
 
 
 /* Banner */
-.banner {
+.hero-image {
   position: relative;
   width: 100%;
   margin-top: 60px; /* navbar offset */
@@ -123,8 +123,8 @@ body {
    crops that contain no part of the dancer, so the floor appears to continue but she is never
    duplicated. The crops are heavily darkened and blurred so the extension reads as ambient floor
    receding into shadow, hiding both the mirror seam and the transition into the sharper photo. */
-.banner::before,
-.banner::after {
+.hero-image::before,
+.hero-image::after {
   content: '';
   position: absolute;
   top: 0;
@@ -135,25 +135,25 @@ body {
   z-index: 0;
 }
 
-.banner::before {
+.hero-image::before {
   left: 0;
-  background-image: url('../img/banner/banner-floor-edge-mirrored.jpg');
+  background-image: url('../img/hero/floor-edge-mirrored.jpg');
   background-position: right center;
 }
 
-.banner::after {
+.hero-image::after {
   right: 0;
-  background-image: url('../img/banner/banner-floor-edge.jpg');
+  background-image: url('../img/hero/floor-edge.jpg');
   background-position: left center;
 }
 
-.banner picture,
-.banner img {
+.hero-image picture,
+.hero-image img {
   position: relative;
   z-index: 1;
 }
 
-.banner img {
+.hero-image img {
   width: 100%;
   max-width: 1200px;
   height: auto;
@@ -161,11 +161,11 @@ body {
   margin: 0 auto;
 }
 
-/* Below 1200px the photo already fills the full banner width, so the floor extension is never
+/* Below 1200px the photo already fills the full hero-image width, so the floor extension is never
    visible; skip loading those extra images. */
 @media (max-width: 1200px) {
-  .banner::before,
-  .banner::after {
+  .hero-image::before,
+  .hero-image::after {
     background-image: none;
   }
 }
@@ -564,7 +564,7 @@ body {
     letter-spacing: 0.5px;
   }
 
-  .banner {
+  .hero-image {
     margin-top: 80px;
   }
 
@@ -671,7 +671,7 @@ body {
     padding: 0.8rem 1rem;
   }
 
-  .banner {
+  .hero-image {
     margin-top: 65px;
   }
 
