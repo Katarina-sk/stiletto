@@ -205,6 +205,11 @@ main {
   border-radius: 8px; /* slightly rounded corners */
 }
 
+.video-content {
+  width: min(1200px, calc(100% - 2rem));
+  max-width: 1200px;
+}
+
 /* Schedule page */
 .schedule-intro {
   margin-bottom: 0.75rem;
@@ -436,7 +441,7 @@ main {
 
 .video-item {
     width: 100%;
-    max-width: 900px;
+  max-width: 800px;
     aspect-ratio: 16 / 9;
 }
 
