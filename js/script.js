@@ -21,4 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  function enterFullscreen(el) {
+    const request = el.requestFullscreen
+      || el.webkitRequestFullscreen
+      || el.webkitEnterFullscreen;
+
+    if (request) {
+      request.call(el);
+    }
+  }
+
+  function isMobilePhone() {
+    const ua = navigator.userAgent || '';
+    const isPhoneUA = /iPhone|Android/i.test(ua) && !/iPad|Tablet/i.test(ua);
+    const isCoarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    return isPhoneUA && isCoarsePointer;
+  }
+
+  if (window.Vimeo) {
+    document.querySelectorAll('.video-item iframe').forEach((iframe) => {
+      const player = new Vimeo.Player(iframe);
+      const videoItem = iframe.closest('.video-item');
+
+      player.on('play', () => {
+        if (isMobilePhone() && videoItem && !document.fullscreenElement) {
+          enterFullscreen(videoItem);
+        }
+      });
+    });
+  }
 });
